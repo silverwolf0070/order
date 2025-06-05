@@ -5,8 +5,9 @@
     <title>{% block title %}{% endblock title %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static "css/normalize.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
 </head>
 <body>
-    
+    {% block content %}{% endblock content %}
 </body>
 </html>
