@@ -17,6 +17,11 @@ def index(request):
             bot.key_word = form.cleaned_data['key_word']
             bot.ban_word = form.cleaned_data['ban_word']
             bot.promt = form.cleaned_data['promt']
+            bot.agent_promt = form.cleaned_data['agent_promt']
+            bot.proxy_host = form.cleaned_data['proxy_host']
+            bot.proxy_port = form.cleaned_data['proxy_port']
+            bot.proxy_password = form.cleaned_data['proxy_password']
+            bot.proxy_user = form.cleaned_data['proxy_user']
             bot.save()
             return render(request, "index.html", {'form': form})
     else:
